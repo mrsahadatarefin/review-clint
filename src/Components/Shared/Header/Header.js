@@ -37,6 +37,9 @@ const Header = () => {
             <li>
               <Link to="/"> Home</Link>
             </li>
+            <li>
+              <Link to="/service"> Service</Link>
+            </li>
 
             <li>
               <Link to="/login"> Login</Link>
@@ -56,7 +59,9 @@ const Header = () => {
           <li>
             <Link to="/"> Home</Link>
           </li>
-
+          <li>
+              <Link to="/service"> Service</Link>
+            </li>
           <li>
             <Link to="/login"> Login</Link>
           </li>
