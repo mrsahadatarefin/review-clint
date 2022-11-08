@@ -4,6 +4,9 @@ import Details from "../Components/Details/Details";
 import Home from "../Components/Home/Home";
 import Login from "../Components/Login/Login";
 import Register from "../Components/Login/Register/Register";
+import Orders from "../Components/Orders/Orders";
+
+
 import Main from "../Layout/Main";
 
 
@@ -31,7 +34,14 @@ import Main from "../Layout/Main";
             path:'/details/:id',
             loader:({params}) => fetch(`http://localhost:5000/service/${params.id}`),
             element:<Details></Details>
+        },
+        {
+            path:'/orders',
+            element:<Orders></Orders>
+                
+            
         }
+
     ]
     
     }
