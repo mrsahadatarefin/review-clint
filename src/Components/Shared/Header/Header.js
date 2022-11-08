@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../Contexts/Authprovider/Authprovider";
 
 const Header = () => {
+  const {user, logOut}=useContext(AuthContext)
+  const handleLogOut=()=>{
+    logOut()
+    .then(() => {})
+    .catch((error) => console.error(error));
+  } 
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -36,6 +43,9 @@ const Header = () => {
             <li>
               <Link to="/register"> Register</Link>
             </li>
+            <li>
+            <Link  onClick={handleLogOut}> Logout</Link>
+            </li>
           </ul>
         </div>
         <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
@@ -51,6 +61,9 @@ const Header = () => {
           </li>
           <li>
             <Link to="/register"> Register</Link>
+          </li>
+          <li>
+            <Link  onClick={handleLogOut}> Logout</Link>
           </li>
         </ul>
       </div>
