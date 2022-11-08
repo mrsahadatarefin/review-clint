@@ -15,6 +15,7 @@ const Register = () => {
         .then(result =>{
           const user = result.user ;
           console.log(user) 
+          alert(' Sing up successful') 
         })
         .catch (error => console.error(error))
     
@@ -33,6 +34,7 @@ createUser(email,password)
     const user =result.user;
     console.log(user);
     form.reset();
+    alert('Register success')  
 })
 .catch(err=>console.error(err));
   };

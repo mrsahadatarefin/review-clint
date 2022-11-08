@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import ALLService from "../Components/ALLService/ALLService";
 import Home from "../Components/Home/Home";
 import Login from "../Components/Login/Login";
 import Register from "../Components/Login/Register/Register";
@@ -18,6 +19,12 @@ import Main from "../Layout/Main";
         {
             path:'/register',
             element:<Register></Register>
+        },
+        {
+            path:'/service',
+            loader:() => fetch("http://localhost:5000/services"),
+            element:<ALLService></ALLService>
+
         }
     ]
     

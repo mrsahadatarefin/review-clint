@@ -3,11 +3,12 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Contexts/Authprovider/Authprovider";
 
 const Login = () => {
-    const navigate=useNavigate();
-    const location =useLocation()
-const from = location.state?.form?.pathname??'/'
+   
    
   const { loginGoogle } = useContext(AuthContext);
+  const navigate=useNavigate();
+  const location =useLocation()
+const from = location.state?.form?.pathname||'/'
   const handleLogin = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -18,6 +19,13 @@ const from = location.state?.form?.pathname??'/'
         const user = result.user;
         console.log(user);
         form.reset();
+        
+           
+            alert('login success')  
+           
+        
+        
+       
         navigate(from, { replace: true });
       })
       .catch((error) => console.error(error));

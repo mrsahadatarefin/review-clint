@@ -8,6 +8,7 @@ const Header = () => {
     logOut()
     .then(() => {})
     .catch((error) => console.error(error));
+    alert('Logout') 
   } 
   return (
     <div className="navbar bg-base-100">
