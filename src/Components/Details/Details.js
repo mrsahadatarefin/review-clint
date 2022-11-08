@@ -1,8 +1,13 @@
-import React from "react";
+
+import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
+import { AuthContext } from "../../Contexts/Authprovider/Authprovider";
 
 const Details = () => {
+    
   const detailsALL = useLoaderData();
+
+  const {user}=useContext(AuthContext)
   const { _id, name, title, description, image, price } = detailsALL;
   return (
     <div>
@@ -17,6 +22,11 @@ const Details = () => {
     </div>
   </div>
 </div>
+<form>
+<div>
+    <input type="text" placeholder="name"></input>
+</div>
+</form>
     </div>
   );
 };
