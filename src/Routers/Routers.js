@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import ALLService from "../Components/ALLService/ALLService";
 import Details from "../Components/Details/Details";
+import Blogs from "../Components/Home/Banner/Blogs";
 import Home from "../Components/Home/Home";
 import Login from "../Components/Login/Login";
 import Register from "../Components/Login/Register/Register";
@@ -40,6 +41,10 @@ import Main from "../Layout/Main";
             element:<Orders></Orders>
                 
             
+        },
+        {
+            path:'/blog',
+            element:<Blogs></Blogs>
         }
 
     ]

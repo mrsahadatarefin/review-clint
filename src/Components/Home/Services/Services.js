@@ -26,7 +26,7 @@ useEffect(()=>{
                 
                 
             </div>
-            <Link className="btn btn-active btn-secondary mx-auto mt-5  " to="/service">See all</Link>
+            <Link className="btn btn-active btn-secondary   px-5  mt-5  mx-5" to="/service">See all</Link>
         </div>
         
     );

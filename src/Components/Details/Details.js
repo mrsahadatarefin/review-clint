@@ -4,7 +4,7 @@ import { AuthContext } from "../../Contexts/Authprovider/Authprovider";
 
 const Details = () => {
 
-  const detailsALL = useLoaderData();
+    const detailsALL = useLoaderData();
 
   const { user } = useContext(AuthContext);
   const handleSubmit = event =>{
@@ -35,7 +35,7 @@ const Details = () => {
         
         console.log(data)
         if( data.acknowledged){
-         alert('review placed successfully') 
+         alert('review placed ') 
          form.reset(); 
         }
     

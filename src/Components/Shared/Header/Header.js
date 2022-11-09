@@ -50,9 +50,12 @@ const Header = () => {
             <li>
             <Link  onClick={handleLogOut}> Logout</Link>
             </li>
+            <li>
+            <Link  to="/blog"> Blogs</Link>
+            </li>
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+        <Link  className="btn btn-ghost normal-case text-3xl"> <h1>Cretive <span className="text-4xl italic text-orange-700" >photographey</span></h1> </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">
@@ -61,6 +64,10 @@ const Header = () => {
           </li>
           <li>
               <Link to="/service"> Service</Link>
+            </li>
+
+            <li>
+            <Link  to="/blog"> Blogs</Link>
             </li>
           <li>
             <Link to="/login"> Login</Link>
@@ -73,9 +80,7 @@ const Header = () => {
           </li>
         </ul>
       </div>
-      <div className="navbar-end">
-        <a className="btn">Get started</a>
-      </div>
+      
     </div>
   );
 };
