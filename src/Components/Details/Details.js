@@ -79,7 +79,7 @@ const Details = () => {
             placeholder="email"
             className="input input-ghost p-10 input-bordered mt-5"
             defaultValue={user?.email}
-            readOnly
+            
           ></input>
           <textarea
           required
