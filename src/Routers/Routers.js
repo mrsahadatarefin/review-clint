@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Addservice from "../Components/Addservice/Addservice";
+import AllReview from "../Components/AllReview/AllReview";
 import ALLService from "../Components/ALLService/ALLService";
 import Details from "../Components/Details/Details";
 import Blogs from "../Components/Home/Banner/Blogs";
@@ -38,9 +39,10 @@ import PriviteRoute from "./PriviteRoute/PriviteRoute";
             loader:({params}) => fetch(`http://localhost:5000/service/${params.id}`),
             element:<Details></Details>
         },
+       
         {
             path:'/orders',
-            element:<PriviteRoute><Orders></Orders></PriviteRoute>
+            element:<Orders></Orders>
                 
             
         },

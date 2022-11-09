@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../Contexts/Authprovider/Authprovider";
+import AllReview from "../AllReview/AllReview";
 
 const Details = () => {
 
@@ -93,6 +94,7 @@ const Details = () => {
         </div>
         <input className="btn" type="submit" value="Add review" />
       </form>
+      <AllReview></AllReview>
     </div>
   );
 };

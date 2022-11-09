@@ -4,16 +4,16 @@ import { AuthContext } from '../../Contexts/Authprovider/Authprovider';
 
 const PriviteRoute = ({children}) => {
 
-    const {user}=useContext(AuthContext)
+    const {user,Loading}=useContext(AuthContext)
     const location =useLocation()
-
-    if(!user ){
-        return<Navigate to ="/login" state={{from:location}} replace></Navigate>
-           }
-
-           return children;
+if(Loading){
+return<h1 className='text- 5xl text-center'>Loading......</h1>
+}
+    if(user ){
+       return children
         
    
 };
-
+return <Navigate state={{from: location}} replace></Navigate>
+}
 export default PriviteRoute;

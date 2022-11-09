@@ -20,10 +20,17 @@ const AuthProvider = ({ children }) => {
     return signInWithPopup(auth, Provider);
   };
   const createUser = (email, password) => {
+
+
+    setLoading(true);
+  
     return createUserWithEmailAndPassword(auth, email, password);
   };
   const loginGoogle = (email, password) => {
+    setLoading(true)
+    
     return signInWithEmailAndPassword(auth, email, password);
+    
   };
 
   const logOut = () => {
@@ -35,6 +42,8 @@ const AuthProvider = ({ children }) => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       console.log(currentUser);
       setUser(currentUser);
+
+      setLoading(false)
     });
     return () => {
       return unsubscribe();
@@ -48,6 +57,7 @@ const AuthProvider = ({ children }) => {
     loginGoogle,
     logOut,
     providerLogin,
+    setLoading
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
