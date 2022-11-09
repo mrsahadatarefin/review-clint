@@ -1,12 +1,17 @@
 import { GoogleAuthProvider } from "firebase/auth";
 import { Result } from "postcss";
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../Contexts/Authprovider/Authprovider";
 
 
 const Register = () => {
     const {createUser, providerLogin}= useContext (AuthContext)
+const navigate =useNavigate();
+const location= useLocation();
+const from = location.state?.form?.pathname||'/'
+
+
     const googleProvider=new GoogleAuthProvider()
     const handleGoogleSingIn=(event)=>{
 
@@ -16,6 +21,8 @@ const Register = () => {
           const user = result.user ;
           console.log(user) 
           alert(' Sing up successful') 
+
+          navigate(from, { replace: true });
         })
         .catch (error => console.error(error))
     
