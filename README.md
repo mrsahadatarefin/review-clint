@@ -1,8 +1,4 @@
-• project's features
-• use mongo db
-• use firebase for this project
-• use react 
-• node
+
 
 
 
