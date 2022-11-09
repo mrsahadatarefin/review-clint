@@ -1,3 +1,13 @@
+• project's features
+• use mongo db
+• use firebase for this project
+• use react 
+• node
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
