@@ -10,7 +10,7 @@ const Details = () => {
   const handleSubmit = event =>{
     event.preventDefault();
     const form =event.target;
-    const name=form.name.value ;
+   
     const email = user?.email ||'unregistered'
     const massage= form.massage.value ;
 
@@ -68,14 +68,10 @@ const Details = () => {
         </div>
       </div>
       <form onSubmit={handleSubmit}>
+
+        <div><h1 className="text-2xl text-center mt-10">Add review</h1></div>
         <div className="grid grid-cols-1  bg-slate-200 mt-10 rounded-md max-w-3xl mx-auto ">
-          <input 
-          name="name"
-            type="text"
-            required
-            placeholder="name"
-            className="input input-ghost p-10 input-bordered mt-5 "
-          ></input>
+         
           <input 
           name="email"
           required
@@ -95,7 +91,7 @@ const Details = () => {
             placeholder="Write your review "
           ></textarea>
         </div>
-        <input className="btn" type="submit" value="submit" />
+        <input className="btn" type="submit" value="Add review" />
       </form>
     </div>
   );

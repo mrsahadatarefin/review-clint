@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Contexts/Authprovider/Authprovider";
+import useTitle from "../../Hooks/UseTittle";
 
 const Login = () => {
    
@@ -8,6 +9,8 @@ const Login = () => {
   const { loginGoogle } = useContext(AuthContext);
   const navigate=useNavigate();
   const location =useLocation()
+
+  useTitle('login');
 const from = location.state?.form?.pathname||'/'
   const handleLogin = (event) => {
     event.preventDefault();

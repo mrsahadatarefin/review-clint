@@ -41,9 +41,7 @@ const Header = () => {
               <Link to="/service"> Service</Link>
             </li>
 
-            <li>
-              <Link to="/login"> Login</Link>
-            </li>
+           
             <li>
               <Link to="/register"> Register</Link>
             </li>
@@ -51,7 +49,13 @@ const Header = () => {
             <Link  onClick={handleLogOut}> Logout</Link>
             </li>
             <li>
+              <Link to="/login"> Login</Link>
+            </li>
+            <li>
             <Link  to="/blog"> Blogs</Link>
+            </li>
+            <li>
+            <Link  to="/add-service"> add-service</Link>
             </li>
           </ul>
         </div>
@@ -68,6 +72,9 @@ const Header = () => {
 
             <li>
             <Link  to="/blog"> Blogs</Link>
+            </li>
+            <li>
+            <Link  to="/add-service"> add-service</Link>
             </li>
           <li>
             <Link to="/login"> Login</Link>

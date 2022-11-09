@@ -3,10 +3,12 @@ import { Result } from "postcss";
 import React, { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../Contexts/Authprovider/Authprovider";
+import useTitle from "../../../Hooks/UseTittle";
 
 
 const Register = () => {
     const {createUser, providerLogin}= useContext (AuthContext)
+    useTitle('Register')
 const navigate =useNavigate();
 const location= useLocation();
 const from = location.state?.form?.pathname||'/'

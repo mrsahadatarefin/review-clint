@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import Addservice from "../Components/Addservice/Addservice";
 import ALLService from "../Components/ALLService/ALLService";
 import Details from "../Components/Details/Details";
 import Blogs from "../Components/Home/Banner/Blogs";
@@ -9,6 +10,7 @@ import Orders from "../Components/Orders/Orders";
 
 
 import Main from "../Layout/Main";
+import PriviteRoute from "./PriviteRoute/PriviteRoute";
 
 
   const router =createBrowserRouter([
@@ -38,13 +40,17 @@ import Main from "../Layout/Main";
         },
         {
             path:'/orders',
-            element:<Orders></Orders>
+            element:<PriviteRoute><Orders></Orders></PriviteRoute>
                 
             
         },
         {
             path:'/blog',
             element:<Blogs></Blogs>
+        },
+        {
+            path:'/add-service',
+            element:<PriviteRoute><Addservice></Addservice></PriviteRoute>
         }
 
     ]
