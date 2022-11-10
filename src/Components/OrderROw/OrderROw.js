@@ -37,7 +37,7 @@ const {user}=useContext(AuthContext);
       </td>
       
       <th>
-        <button onClick={()=>handleStatusUpdate(_id)} className="btn btn-ghost btn-xs"> { status ? status:"pending"}</button>
+        <button onClick={()=>handleStatusUpdate(_id)} className="btn btn-ghost btn-xs">edit</button>
       </th>
     </tr>
     );

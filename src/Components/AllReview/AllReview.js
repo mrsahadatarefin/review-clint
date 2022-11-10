@@ -1,15 +1,27 @@
-import React, { useContext } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import React, { useContext, useEffect, useState } from 'react';
+
 import { AuthContext } from '../../Contexts/Authprovider/Authprovider';
 
 const AllReview = () => {
 const {user}=useContext(AuthContext)
-    const detailsALL = useLoaderData();
+const [order, setOrder] = useState([]);
+
+  useEffect(() => {
+    fetch(`https://review-server-ten.vercel.app/orders/`)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.status === 200) {
+          setOrder(data.data);
+        }
+      });
+  }, []);
    
-    const {massage,email,}=detailsALL
+   
+    
     return (
         <div>
-            <h1>{massage}</h1>
+           
         </div>
     );
 };

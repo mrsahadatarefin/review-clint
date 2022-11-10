@@ -30,13 +30,13 @@ import PriviteRoute from "./PriviteRoute/PriviteRoute";
         },
         {
             path:'/service',
-            loader:() => fetch("http://localhost:5000/services"),
+            loader:() => fetch("https://review-server-mrsahadatarefin.vercel.app/services"),
             element:<ALLService></ALLService>
 
         },
         {
             path:'/details/:id',
-            loader:({params}) => fetch(`http://localhost:5000/service/${params.id}`),
+            loader:({params}) => fetch(`https://review-server-mrsahadatarefin.vercel.app/services/${params.id}`),
             element:<Details></Details>
         },
        
