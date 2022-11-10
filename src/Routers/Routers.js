@@ -36,7 +36,7 @@ import PriviteRoute from "./PriviteRoute/PriviteRoute";
         },
         {
             path:'/details/:id',
-            loader:({params}) => fetch(`https://review-server-mrsahadatarefin.vercel.app/services/${params.id}`),
+            loader:({params}) => fetch(`https://review-server-mrsahadatarefin.vercel.app/service/${params.id}`),
             element:<Details></Details>
         },
        
